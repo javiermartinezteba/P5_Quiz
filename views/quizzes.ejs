@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUIZ</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+<title>Lista de Quizzes</title>
+<table>
+
+    <% var quiz = (JSON.parse(quizList)) %>
+    <% for(i = 0; i<quiz.length; i++){ %>
+    <tr>
+        <td>
+            <%-quiz[i].question +":"%>
+        </td>
+        <td>
+         <%- quiz[i].answer %>
+        </td>
+    </tr>
+    <% } %>
+</table>
+</body>
+
+
+</html>
